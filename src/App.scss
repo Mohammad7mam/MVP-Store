@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Commissioner:wght@100..900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Darumadrop+One&family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero {
+  width: 98.875vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .hero-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    margin-left: 5vw;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .hero-title {
+      font-size: 2.635431918008785vw;
+      color: #ff1500;
+      line-height: 1.5;
+    }
+
+    .hero-text {
+      font-size: 1.1713vw;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .hero-btn {
+      width: 150px;
+      height: 50px;
+      background: #ff1500;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-family: "Press Start 2P", Courier, monospace;
+    }
+  }
+}
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #ff1500;
+    font-size: 0.87847vw;
+  }
+}
+.mm {
+  display: flex;
+  width: 98.875vw;
+  justify-content: center;
+  height: 120vh;
+  .main-category {
+    width: 95.97vw;
+    height: 86.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .grid-category {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      position: relative;
+      flex: 1 1 calc(50% - 20px);
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      height: 357px;
+      border: 2px solid #ff0000 !important;
+      // z-index: -1;
+    }
+    .Ps5 {
+      border: 3px solid #0060e4 !important;
+    }
+    .Xbox {
+      border: 3px solid #06c906 !important;
+    }
+    .Nintendo {
+      border: 3px solid #e80015 !important;
+    }
+    .PC {
+      border: 3px solid #df3dd6 !important;
+    }
+    .right-image {
+      flex: 1;
+      background-color: #ff0000;
+      position: relative;
+      z-index: 0;
+      min-width: 390px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: luminosity; /* التأثير فقط على الصورة */
+        position: absolute;
+        top: 0;
+        left: 0;
+        // z-index: -1; /* تبقى تحت المحتوى */
+      }
+    }
+    .Ps5-image {
+      background-color: #0060e4;
+    }
+    .Xbox-image {
+      background-color: #06c906;
+    }
+    .PC-image {
+      background-color: #df3dd6;
+    }
+    .Nintendo-image {
+      background-color: #e80015;
+    }
+
+    .left-content {
+      flex: 1;
+      padding: 20px;
+      // z-index: 1;
+      position: relative;
+      // background: rgba(255, 255, 255, 0.9);
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      gap: 30px;
+    }
+    .PC-content {
+      color: #df3dd6;
+      a {
+        background-color: #df3dd6;
+      }
+    }
+    .Xbox-content {
+      color: #06c906;
+      a {
+        background-color: #06c906;
+      }
+    }
+    .Nintendo-content {
+      color: #e80015;
+      a {
+        background-color: #e80015;
+      }
+    }
+    .Ps5-content {
+      color: #0060e4;
+      a {
+        background-color: #0060e4;
+      }
+    }
+
+    .left-content a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #000000;
+      padding: 20px;
+      font-size: 13px;
+      width: 150px;
+    }
+  }
+}
+.Products {
+  margin-top: 90px;
+
+  .container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 130px;
+    width: 90.5vw;
+
+    .buttons {
+      display: flex;
+      // flex-direction: column;
+      gap: 20px;
+      font-family: "Press Start 2P", Courier, monospace;
+    }
+
+    .fancy-btn {
+      position: relative;
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      font-size: 10px;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      overflow: hidden;
+      font-family: "Press Start 2P", Courier, monospace;
+    }
+
+    /* الخط عند الهوفر */
+    .fancy-btn::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0; /* يبدأ من اليمين */
+      width: 0;
+      height: 2px;
+      background-color: #ff1500;
+      transition: width 0.4s ease;
+    }
+
+    .fancy-btn:hover::after {
+      width: 100%; /* يمتد للعرض الكامل */
+      left: 0; /* يتحرك من اليمين لليسار */
+    }
+
+    .fancy-btn:hover {
+      color: #ff1500; /* لون النص عند الهوفر */
+    }
+
+    /* المكون الثاني */
+    .heading h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff1500;
+    }
+  }
+
+  .ProductsList {
+    display: flex;
+    // width: 84vw;
+    justify-content: space-evenly;
+
+    :hover {
+      border: 2px solid #ff1500 !important;
+    }
+
+    .ProductItem {
+      width: 265px;
+      // height: 452px;
+      height: 392px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6px 14px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: inset 0 0 48.5px 4px #ff15001d;
+      border: 2px solid #05050500;
+
+      /* item 1 */
+      :hover {
+        border: 0px solid #ff1500 !important;
+      }
+      .item1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        .boxes {
+          display: flex;
+          gap: 5px;
+          :hover {
+            border: 2px solid #ff1500 !important;
+          }
+
+          .box1 {
+            display: flex;
+            color: #ff1500;
+            border: 2px solid #ff1500;
+            width: 55px;
+            height: 25px;
+            font-size: 10px;
+            align-items: center;
+            justify-content: center;
+          }
+          .box2 {
+            display: flex;
+            background-color: #ff1500;
+            color: rgb(0, 0, 0);
+            border: 2px solid #ff1500;
+            width: 55px;
+            height: 25px;
+            font-size: 10px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      /* item 2 */
+      .item2 img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+
+      /* item 3 */
+      .item3 h2 {
+        text-align: center;
+        font-size: 14px;
+        color: #ff1500;
+        line-height: 1.5;
+      }
+
+      /* item 4 */
+      .item4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .left-text {
+          color: #ff1500;
+          font-size: 15px;
+        }
+
+        .right-text {
+          color: #fff;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+
+      /* item 5 */
+      .item5 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .item5 button {
+        display: flex;
+        padding: 8px 16px;
+        background-color: #ff1500;
+        color: rgb(0, 0, 0);
+        border: 2px solid #ff1500;
+        cursor: pointer;
+        font-family: "Press Start 2P", Courier, monospace;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item5 button:hover {
+        background-color: #000000;
+        color: #ff1500;
+        border: 2px solid #ff1500;
+      }
+    }
+  }
+}
+.custom-container {
+  width: 90vw;
+  margin: 0 auto;
+  border: 2px solid red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+
+  .section {
+    &-1 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #ff1500;
+      }
+      p {
+        font-size: 15px;
+
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+
+    &-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 93%;
+        height: 122px;
+
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 18px;
+          color: #ff1500;
+
+          img {
+            height: 82px;
+          }
+          span {
+            width: 287px;
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 247px;
+          gap: 20px;
+
+          p {
+            margin: 0;
+            font-size: 11px;
+          }
+          .one {
+            color: #ff1500;
+          }
+          .two {
+            color: #d3ca79;
+          }
+        }
+      }
+
+      .divider {
+        width: 95%;
+        height: 2px;
+        background-color: #ff0000;
+        border-radius: 50px;
+      }
+    }
+
+    &-3 {
+      display: flex;
+      justify-content: center;
+
+      button {
+        padding: 10px 20px;
+        border: 2px solid #ff1500;
+        background-color: #ff1500;
+        font-size: 12px !important; 
+        color: #000;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+        font-family: "Press Start 2P", Courier, monospace;
+
+        &:hover {
+          background-color: rgb(0, 0, 0);
+          color: #ff1500;
+        }
+      }
+    }
+  }
+}
