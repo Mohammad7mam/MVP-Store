@@ -4,7 +4,7 @@ import Xbox from "../assets/img/Products/xbox.png"; // تأكد من المسا�
 
 function limitedOffers() {
   return (
-    <div className="custom-container">
+    <div className="limited-offers">
       {/* القسم الأول */}
       <div className="section section-1">
         <h2 >Limited Time offers</h2>

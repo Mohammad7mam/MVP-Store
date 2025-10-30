@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Commissioner:wght@100..900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Darumadrop+One&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Commissioner:wght@100..900&family=Convergence&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Darumadrop+One&family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -92,6 +92,14 @@
       border: none;
       cursor: pointer;
       font-family: "Press Start 2P", Courier, monospace;
+      border: 2px solid #ff1500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: #ff1500;
+        border: 2px solid #ff1500;
+      }
     }
   }
 }
@@ -116,10 +124,8 @@
   display: flex;
   width: 98.875vw;
   justify-content: center;
-  height: 120vh;
   .main-category {
     width: 95.97vw;
-    height: 86.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,48 +135,52 @@
       flex-wrap: wrap;
       gap: 20px;
       width: 100%;
-      height: 100%;
       justify-content: center;
       align-items: center;
     }
 
     .box {
       position: relative;
+      width: 90vw;
       flex: 1 1 calc(50% - 20px);
-      display: flex;
-      border-radius: 15px;
-      overflow: hidden;
       height: 357px;
+      margin: 0 auto;
       border: 2px solid #ff0000 !important;
-      // z-index: -1;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
+
     .Ps5 {
-      border: 3px solid #0060e4 !important;
+      border: 2px solid #0060e4 !important;
     }
     .Xbox {
-      border: 3px solid #06c906 !important;
+      border: 2px solid #06c906 !important;
     }
     .Nintendo {
-      border: 3px solid #e80015 !important;
+      border: 2px solid #e80015 !important;
     }
     .PC {
-      border: 3px solid #df3dd6 !important;
+      border: 2px solid #df3dd6 !important;
     }
     .right-image {
-      flex: 1;
-      background-color: #ff0000;
-      position: relative;
-      z-index: 0;
-      min-width: 390px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 58%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        mix-blend-mode: luminosity; /* التأثير فقط على الصورة */
+        mix-blend-mode: luminosity;
         position: absolute;
         top: 0;
         left: 0;
-        // z-index: -1; /* تبقى تحت المحتوى */
       }
     }
     .Ps5-image {
@@ -187,45 +197,96 @@
     }
 
     .left-content {
-      flex: 1;
-      padding: 20px;
-      // z-index: 1;
       position: relative;
-      // background: rgba(255, 255, 255, 0.9);
-      justify-content: center;
+      z-index: 2;
+      flex: 1;
+      padding: 36px;
       display: flex;
       flex-direction: column;
-      font-size: 20px;
+      justify-content: center;
       gap: 30px;
+      color: #fff;
+
+      h2 {
+        font-size: 2rem;
+        width: 281px;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+
+      .shop-btn {
+        background-color: #ff0000;
+        color: #000;
+        border: none;
+        padding: 15px 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s ease;
+        width: 150px;
+        font-family: "Press Start 2P", Courier, monospace;
+        font-size: 13px;
+        border: 2px solid #ff0000;
+
+        &:hover {
+          background-color: transparent;
+          color: #ff0000;
+          border: 2px solid #ff0000;
+        }
+      }
     }
     .PC-content {
       color: #df3dd6;
-      a {
+
+      .shop-btn {
         background-color: #df3dd6;
+        border: 2px solid #df3dd6;
+        &:hover {
+          color: #df3dd6;
+          border: 2px solid #df3dd6;
+        }
       }
     }
     .Xbox-content {
       color: #06c906;
-      a {
+
+      .shop-btn {
+        border: 2px solid #06c906;
         background-color: #06c906;
+        &:hover {
+          color: #06c906;
+          border: 2px solid #06c906;
+        }
       }
     }
     .Nintendo-content {
       color: #e80015;
-      a {
+
+      .shop-btn {
         background-color: #e80015;
+        border: 2px solid #e80015;
+
+        &:hover {
+          color: #e80015;
+          border: 2px solid #e80015;
+        }
       }
     }
     .Ps5-content {
       color: #0060e4;
-      a {
+
+      .shop-btn {
         background-color: #0060e4;
+        border: 2px solid #0060e4;
+        &:hover {
+          color: #0060e4;
+          border: 2px solid #0060e4;
+        }
       }
     }
 
     .left-content a {
       display: inline-block;
-      margin-top: 10px;
       text-decoration: none;
       color: #000000;
       padding: 20px;
@@ -234,6 +295,7 @@
     }
   }
 }
+
 .Products {
   margin-top: 90px;
 
@@ -419,7 +481,7 @@
     }
   }
 }
-.custom-container {
+.limited-offers {
   width: 90vw;
   margin: 0 auto;
   border: 2px solid red;
@@ -428,6 +490,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 40px;
+  margin-top: 20vh;
 
   .section {
     &-1 {
@@ -468,6 +531,7 @@
           gap: 10px;
           font-size: 18px;
           color: #ff1500;
+          line-height: 1.5;
 
           img {
             height: 82px;
@@ -513,11 +577,11 @@
         padding: 10px 20px;
         border: 2px solid #ff1500;
         background-color: #ff1500;
-        font-size: 12px !important; 
+        font-size: 12px !important;
         color: #000;
         cursor: pointer;
         font-size: 16px;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
         font-family: "Press Start 2P", Courier, monospace;
 
         &:hover {
@@ -528,3 +592,176 @@
     }
   }
 }
+// RightImageCard.scss
+.rig-box {
+  width: 95vw;
+  height: 60vh;
+  margin: 0 auto;
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-sizing: border-box;
+
+  .rig-content {
+    width: 529px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    line-height: 1.5;
+    h2 {
+      font-size: 32px;
+      color: #ff1500;
+      font-weight: 500;
+    }
+  }
+
+  .rig-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    padding: 15px 20px;
+    border: 2px solid #ff1500;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "Press Start 2P", Courier, monospace;
+    // width: 150px;
+  }
+  .btn.primary {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        color: #ff1500 !important;
+
+       &:hover {
+      transition: all 0.3s ease;
+      color: #ffffff !important;
+      border: 2px solid #fff;
+    }
+
+  }
+  .btn.secondary {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ background-color: #ff1500;
+    &:hover {
+      background-color: #ffffff;
+      transition: all 0.3s ease;
+      border: 2px solid #ffffff;
+    }   
+  }
+  .rig-image img {
+    width: 80%;
+margin-left: 10%;
+    object-fit: cover;
+    display: block;
+  }
+}
+/* CSS */
+.gallery {
+  width: 95vw;
+  height: 16vh;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: stretch; /* كل عنصر يمتد ليأخذ ارتفاع الحاوية */
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* يضع الصورة في منتصف الديف عمودياً */
+    text-align: center;
+    padding: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    // border: 2px solid #ff1500;
+    border-radius: 10px;
+    box-shadow: inset 0 0 48.5px 4px #ff15001d;
+    height: 100px;
+          border: #ff150000 solid 2px;
+
+    &:hover{
+      transition: all 0.3s ease;
+      border: #FF1500 solid 2px;
+    }
+  }
+
+  .item img {
+    max-height: 70%; /* يترك مساحة للنص تحت الصورة */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .caption {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  /* اختياري: جعلها أكثر استجابة عند الشاشات الصغيرة */
+  @media (max-width: 600px) {
+    .gallery {
+      gap: 6px;
+    }
+    .caption {
+      font-size: 0.8rem;
+    }
+    .item img {
+      max-height: 50%;
+    }
+  }
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #ff1500;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 24px;
+  border: 2px solid #ff1500;
+  background-color: #00000000;
+  font-family: "Convergence", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+ .swir {
+      // background-color: #06c906 !important;
+      position: relative;
+      width: 95vw;
+      margin-left: 2.471875vw;
+   
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+ }

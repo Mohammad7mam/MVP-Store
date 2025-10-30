@@ -1,6 +1,13 @@
 import React from "react";
 import ProductItem from "./Proudcts/ProductItem";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/autoplay';
+import { FreeMode, Autoplay } from 'swiper/modules';
+
+
 function ProductsList() {
   return (
     <div className="Products">
@@ -22,6 +29,7 @@ function ProductsList() {
 <ProductItem/>
 <ProductItem/>
 <ProductItem/>
+
 
 
 </div>

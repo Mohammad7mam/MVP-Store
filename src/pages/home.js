@@ -5,6 +5,7 @@ import MajorCategory from "../components/majorCategory"
 import PouductsList from "../components/productsList"
 import LimitedOffers from "../components/limitedOffers"
 
+import Swiper from "../components/swiper"
 
 
 
@@ -23,6 +24,7 @@ function Home() {
 <MajorCategory/>
 <PouductsList/>
 <LimitedOffers/>
+<Swiper/>
 </>
 
   );
