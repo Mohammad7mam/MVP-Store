@@ -6,6 +6,8 @@ import PouductsList from "../components/productsList"
 import LimitedOffers from "../components/limitedOffers"
 
 import Swiper from "../components/swiper"
+import SwiperTest from "../components/swiperTest"
+
 
 
 
@@ -24,7 +26,26 @@ function Home() {
 <MajorCategory/>
 <PouductsList/>
 <LimitedOffers/>
-<Swiper/>
+{/* <Swiper/> */}
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<SwiperTest/>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
 </>
 
   );
